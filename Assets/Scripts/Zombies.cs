@@ -19,6 +19,8 @@ public class Zombies : MonoBehaviour
     {
         direction = player.transform.position - transform.position;
 
-        transform.Translate(direction.normalized * Time.deltaTime * speed);
+        transform.forward = direction;
+
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
